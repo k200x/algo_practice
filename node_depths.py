@@ -17,4 +17,5 @@ def nodeDepths(root):
         depth_sum += depth
         stack.append({"node": node.left, "depth": depth + 1})
         stack.append({"node": node.right, "depth": depth + 1})
+
     return depth_sum
