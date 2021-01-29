@@ -25,18 +25,8 @@ class Graph():
         return min_index
 
     def dijkstra(self, src):
-        dist = [sys.maxsize] * self.V
-        dist[src] = 0
-        spt_set = [False] * self.V
+        distances = [sys.maxsize] * self.V
 
-        for _ in range(self.V):
-            u = self.min_distance(dist, spt_set)
-            spt_set[u] = True
-            for v in range(self.V):
-                if self.graph[u][v] > 0 and spt_set[v] == False and dist[v] > dist[u] + self.graph[u][v]:
-                    dist[v] = dist[u] + self.graph[u][v]
-
-        self.print_solution(dist)
 
 
 g = Graph(9)
