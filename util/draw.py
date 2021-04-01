@@ -39,7 +39,6 @@ def draw_weight_graph(G):
         "edgecolors": "blue",
         "linewidths": 3,
         "width": 3,
-
     }
 
     pos = nx.nx_agraph.graphviz_layout(G)
